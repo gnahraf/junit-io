@@ -79,9 +79,9 @@ class ObjectManagerTest extends com.gnahraf.test.IoTestCase {   //          (1)
 
 A few things to note:
 
-0. Test output files are maintained under the `target/test-outputs` directory. There's one nested subdirectory per class, then one subdirectory nested per test method, and then one nested file or subdirectory per run of the test method.
-1. The `new Object() { }` hack. This is a way to pass a test method's name without hardcoding it. (If you rename the method `test100` to `testHundred` everything still works.) Yes, an annotation solution would be more elegant, but this author is lazy.
-2. `getMethodOutputFilepath(methObj)` returns a new abstract file path that does not yet exist. If you create a file or directory there and invoke this method again, it'll again return a *new* path that does not yet exist; otherwise, it returns the same path.
+1. Test output files are maintained under the `target/test-outputs` directory. There's one nested subdirectory per class, then one subdirectory nested per test method, and then one nested file or subdirectory per run of the test method.
+2. The `new Object() { }` hack. This is a way to pass a test method's name without hardcoding it. (If you rename the method `test100` to `testHundred` everything still works.) Yes, an annotation solution would be more elegant, but this author is lazy.
+3. `getMethodOutputFilepath(methObj)` returns a new abstract file path that does not yet exist. If you create a file or directory there and invoke this method again, it'll again return a *new* path that does not yet exist; otherwise, it returns the same path.
 
 Sources are attached during the install. In IDEs like Eclipse this means code completion suggestions are accompanied with on-the-fly generated javadoc comments. 
 
